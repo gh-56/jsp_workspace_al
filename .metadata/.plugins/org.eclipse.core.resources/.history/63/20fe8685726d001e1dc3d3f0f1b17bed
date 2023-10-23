@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>beansResult.jsp</title>
+</head>
+<body>
+	session member : <%=session.getAttribute("m") %>
+	pageContext m : <%=pageContext.findAttribute("m") %>
+	<br/>
+	<hr/>
+	<%
+		com.erser.test.Member ccc = (com.erser.test.Member)session.getAttribute("ccc");
+	%>
+	<jsp:useBean id="ccc" class="com.erser.test.Member" scope="session"/>
+	<%=ccc %>
+</body>
+</html>

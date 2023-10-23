@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>includeTest1.jsp</title>
+</head>
+<body>
+	<h1>여기는 includeTest1.jsp 입니다.	</h1>
+	<%-- <%@ include file="includeTest2.jsp" %> --%>
+	<jsp:include page="includeTest2.jsp" flush="true" >
+		<jsp:param name="name" value="LGH"/>
+	</jsp:include>
+	<%-- <%=str %> --%>
+	<% response.setHeader("aaa", "Test Data"); %>
+</body>
+</html>

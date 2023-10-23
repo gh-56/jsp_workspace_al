@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index.jsp</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th colspan="2" height="150">
+				<jsp:include page="header.jsp"></jsp:include>
+			</th>
+		</tr>
+	</table>
+</body>
+</html>

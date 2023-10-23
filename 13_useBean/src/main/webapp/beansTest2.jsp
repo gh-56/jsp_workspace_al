@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>beansTest2.jsp</title>
+</head>
+<body>
+	<form action="beansResult.jsp" method="POST">
+		id : <input type="text" name="id" required /> <br/>
+		pw : <input type="password" name="pw" required /> <br/>
+		email : <input type="email" name="email" required /> <br/>
+		age : <input type="number" name="age" required /> <br/>
+		<button>확인</button>
+	</form>
+</body>
+</html>

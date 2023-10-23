@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="java.sql.*, com.erser.util.*" %>
+<!-- joinCheck.jsp -->
+
+<jsp:useBean id="joinMember" class="vo.MemberVO"/>
+<jsp:setProperty name="joinMember" property="*"/>
+
+<%
+	Connection conn = DBCPUtil.getConnection();
+
+	DBCPUtil.close(conn);
+%>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- context.xml -->
+<Context>
+	<!-- <Resource
+		name="java/MySQLDB"
+		auth="container"
+		type="javax.sql.DataSource"
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+		driverClassName="com.mysql.cj.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/develop_sql"
+		username="root"
+		password="12345"
+		initialSize="10"
+		minIdle="10"
+		maxActive="20"
+		maxIdle="20"/> -->
+		
+		<!-- 
+			initialSize : 커넥션 풀 생성 시 최초에 생성해 둘 Connection 객체의 수(기본값:0)
+			maxActive : 동시에 접근할 때 생성할 수 있는 최대 커넥션 수 (기본값 :8)
+			maxWait : (millis) 할당 받을 Connection 객체가 없을 때 스레드를 블럭 시킬 시간 0보다 작을 졍우 무한대기(기본값:-1)
+			minIdle : 사용되지 않고 풀에 저장될 수 있는 최소 커넥션 수(default:0)
+			maxIdle : 커넥션 풀에 커넥션을 반납할 때 최대로 유지될 수 있는 커넥션 수(defalut:8)
+		 -->
+</Context>

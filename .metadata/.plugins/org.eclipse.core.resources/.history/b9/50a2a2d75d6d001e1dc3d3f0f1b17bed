@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- xml.jsp -->
+<h1>XML Generator</h1>
+<!-- custom tag 추가 -->
+<jsp:element name="lee">
+	<jsp:attribute name="id">
+		leeID
+	</jsp:attribute>
+</jsp:element>

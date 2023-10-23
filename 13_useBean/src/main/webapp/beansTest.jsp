@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="com.erser.test.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>beansTest.jsp</title>
+</head>
+<body>
+	<h1>BeansTest</h1>
+	<%
+		ServletContext app = pageContext.getServletContext();
+		HttpSession ses = pageContext.getSession();
+		ServletRequest req = pageContext.getRequest();
+		
+		app = request.getServletContext();
+		ses = request.getSession();
+		
+		app = session.getServletContext();
+		
+		Member m = new Member();
+		
+		ses.setAttribute("m",m);
+	%>
+	<%=m %>
+	
+	<a href="beansResult.jsp">result</a> <br/>
+	<a href="beansTest2.jsp">beans test</a>
+	<hr/>
+	<h2>use Bean</h2>
+	<%-- <%
+		Member aaa = new Member();
+		pageContext.setAttribute("aaa", aaa);
+	%> --%>
+	<jsp:useBean id="aaa" class="com.erser.test.Member" scope="page"/>
+	<jsp:useBean id="bbb" class="com.erser.test.Member" scope="request"/>
+	<jsp:useBean id="ccc" class="com.erser.test.Member" scope="session"/>
+	<jsp:useBean id="ddd" class="com.erser.test.Member" scope="application"/>
+	<jsp:setProperty name="ccc" property="name" value="페이커"/>
+	<%= ccc.getName() %>
+	<br/>
+	<jsp:getProperty name="ccc" property="name" />
+</body>
+</html>
